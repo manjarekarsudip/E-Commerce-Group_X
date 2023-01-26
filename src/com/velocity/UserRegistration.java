@@ -37,10 +37,10 @@ public class UserRegistration {
 				displayMenu.getMenu();
 				
 				PurchaseProduct purchaseProduct = new PurchaseProduct();
-				purchaseProduct.userPurchaseDetail(Name);
+				purchaseProduct.userPurchaseDetail(name);
 				
 				TotalPrice totalPrice = new TotalPrice();
-				totalPrice.getPrice(Name);
+				totalPrice.getPrice(name);
 				
 			}else if((map.containsKey(name))&&(!map.containsValue(password))) {
 				System.out.println("Wrong Password");
@@ -49,18 +49,15 @@ public class UserRegistration {
 				displayMenu.getMenu();
 				
 				PurchaseProduct purchaseProduct = new PurchaseProduct();
-				purchaseProduct.userPurchaseDetail(Name);
+				purchaseProduct.userPurchaseDetail(name);
 				
 				TotalPrice totalPrice = new TotalPrice();
-				totalPrice.getPrice(Name);
+				totalPrice.getPrice(name);
 			}
 			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return userRegistration;
-		
-		
+		return userRegistration;	
 	}
-
 }
