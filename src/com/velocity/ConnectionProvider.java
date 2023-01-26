@@ -1,4 +1,4 @@
-package com.velocity.jdbc;
+package com.velocity;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
