@@ -26,8 +26,8 @@ public AdminMode getAdminAccess() {
 			break;
 		case 2:
 			System.out.println("Registerd User List");
-			RegisterdList registerdList =new RegisterdList();
-			registeredList.getregisteredList();
+			RegisteredList registeredList =new RegisteredList();
+			registeredList.registeredList();
 		break;
 		case 3:
 			System.out.println("Purchase History");
