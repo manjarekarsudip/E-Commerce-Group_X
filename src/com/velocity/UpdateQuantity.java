@@ -13,7 +13,7 @@ public class UpdateQuantity {
 		try {
 			ConnectionProvider connection = new ConnectionProvider();
 			con = connection.getConnectionDetails();
-			ps = con.prepareStatement("UPDATE ADMIN SET Quantity=? WHERE Name=?");
+			ps = con.prepareStatement("UPDATE ADMIN SET Quantity=Quantity-? WHERE Name=?");
 			ps.setInt(1, quantity);
 			ps.setString(2, productName);
 			ps.executeUpdate();
