@@ -24,15 +24,12 @@ public class MainClass {
 			UserMode userMode=new UserMode();
 			userMode.getUserAccess();
 			break;
-			case 3:System.out.println("Thank You For visiting");
+			case 3:System.out.println("Thank You For Visiting");
 			choice=false;
 			break;
 			default:System.out.println("Invalid Input Please try again");
 			choice=true;
 			break;
-				
-			
-			
 			}
 		}
 		

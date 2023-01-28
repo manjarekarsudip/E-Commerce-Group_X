@@ -22,7 +22,7 @@ public class UserRegistration {
 		try {
 			ConnectionProvider connection=new ConnectionProvider();
 			con=connection.getConnectionDetails();
-			con.prepareStatement("Select * from user");
+			ps = con.prepareStatement("Select * from user");
 			ResultSet rs = ps.executeQuery();
 			while(rs.next()) {
 				String uName=rs.getString("UserName");

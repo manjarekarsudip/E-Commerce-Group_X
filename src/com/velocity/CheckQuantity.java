@@ -13,7 +13,7 @@ public class CheckQuantity {
 	 try {
 		ConnectionProvider connection=new ConnectionProvider();
 		con=connection.getConnectionDetails();
-		ps=con.prepareStatement("SELECT * FROM admin WHERE product_id=?");
+		ps=con.prepareStatement("SELECT * FROM products WHERE product_id=?");
 		ps.setInt(1,id);
 		ResultSet rs=ps.executeQuery();
 		String productId = "product_id";
