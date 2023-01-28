@@ -14,7 +14,7 @@ public class AddToCart {
 		try {
 			ConnectionProvider connection = new ConnectionProvider();
 			con = connection.getConnectionDetails();
-			ps = con.prepareStatement("SELECT price from Admin WHERE name=?");
+			ps = con.prepareStatement("SELECT price from products WHERE name=?");
 			ps.setString(1, productName);
 			ResultSet rs = ps.executeQuery();
 			

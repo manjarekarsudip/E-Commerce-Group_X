@@ -11,7 +11,7 @@ import java.sql.ResultSet;
 		try {
 			ConnectionProvider connection=new ConnectionProvider();
 			con=connection.getConnectionDetails();
-			ps=con.prepareStatement("SELECT Price,Quantity from HISTORY where UserName=?");
+			ps=con.prepareStatement("SELECT Price,Quantity from history where UserName=?");
 			ps.setString(1, uName);
 			ResultSet rs=ps.executeQuery();
 			int totalprice =0;

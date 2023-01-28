@@ -5,18 +5,9 @@ import java.util.Scanner;
 public class PurchaseProduct {
 
 	public void userPurchaseDetail(String name) {
-		System.out.println("1. iPhone 13");
-		System.out.println("2. iPhone 14 Pro");
-		System.out.println("3. AirPods 2nd Gen");
-		System.out.println("4. AirPods 3rd Gen");
-		System.out.println("5. AirPods Pro");
-		System.out.println("6. iMac 24");
-		System.out.println("7. MacBook M1");
-		System.out.println("8. MacBook M2");
-		System.out.println("9. MacBook Pro 14");
-		System.out.println("10. MacBook Pro 16");
-		System.out.println("0. Exit");
-		
+
+		System.out.println("11.                           Sort By Price");
+		System.out.println("12.                           Exit");
 		boolean choice = true;
 		Scanner sc = new Scanner(System.in);
 		while(choice) {
@@ -27,7 +18,7 @@ public class PurchaseProduct {
 			
 			AddToCart addToCart =new AddToCart();
 			UpdateQuantity updateQuantity = new UpdateQuantity();
-			
+			SortByPrice sortedPrice = new SortByPrice();
 			switch(a) {
 			case 1:
 				String s1 = "iPhone 13";
@@ -60,12 +51,12 @@ public class PurchaseProduct {
 				updateQuantity.getUpdateQuantity(quantity, s6);
 				break;
 			case 7:
-				String s7 = "MacBook M1";
+				String s7 = "MacBook Air M1";
 				addToCart.insertProduct(name, s7, quantity);
 				updateQuantity.getUpdateQuantity(quantity, s7);
 				break;
 			case 8:
-				String s8 = "MacBook M2";
+				String s8 = "MacBook Air M2";
 				addToCart.insertProduct(name, s8, quantity);
 				updateQuantity.getUpdateQuantity(quantity, s8);
 				break;
@@ -79,12 +70,17 @@ public class PurchaseProduct {
 				addToCart.insertProduct(name, s10, quantity);
 				updateQuantity.getUpdateQuantity(quantity, s10);
 				break;
-			case 0:
-				System.out.println("ThankYou For Visiting...");
+			case 11:
+				sortedPrice.getSortedPrice();
+				break;
+			case 12:
+				System.out.println("Thank You For Visiting...");
 				choice=false;
 				break;
 			default:
 				System.out.println("Invalid Input...");
+				choice= true;
+				break;
 			}
 		}
 	}
